@@ -10,14 +10,7 @@ import git.tools.client.GitSubprocessClient;
 
 public class Main extends JFrame {
     public static void main(String[] args) {
-       
-    	System.out.println("Test");
-        GitSubprocessClient gitSubprocessClient = new GitSubprocessClient("insert repo path here");
-
-        GitHubApiClient gitHubApiClient = new GitHubApiClient("insert user", "insert token");
-        GetRepoInfoResponse repoInfo = gitHubApiClient.getRepoInfo("CSC109", "GitHubApiClient");
-        new Main("test");
-       
+        new Main("Module 9 - Group 2");
     }
     
     public Main(String title) {
