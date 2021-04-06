@@ -8,8 +8,8 @@ import javax.swing.JPanel;
 public class Panel extends JPanel {
 
 	// Make this your token, delete before pushing this to GitHub
-	private final String personalToken = "";
-	private final String myGitHubUsername = "";
+	private final String personalToken = "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";
+	private final String myGitHubUsername = "KyleChutjian";
 	private final String repoOwner = "hutch445";
 	private final String repoName = "CSC109-Module9";
 
@@ -17,7 +17,7 @@ public class Panel extends JPanel {
 		super();
 
 		if (personalToken == null || myGitHubUsername == null) {
-			System.out.println("Enter your personal token in Panel.java");
+			System.out.println("Enter your personal token or GitHub username in Panel.java");
 			System.exit(1);
 		}
 
@@ -29,10 +29,17 @@ public class Panel extends JPanel {
 
 		GitSubprocessClient gitSubprocessClient = new GitSubprocessClient("insert repo path here");
 
+//		String repoPath = "C:/Users/Alex/Documents/GitRepos/HelloWorld";
+//		GitSubprocessClient gitSubprocessClient = new GitSubprocessClient(repoPath);
+
+
 		GitHubApiClient gitHubApiClient = new GitHubApiClient(myGitHubUsername, personalToken);
 		GetRepoInfoResponse repoInfo = gitHubApiClient.getRepoInfo(repoOwner, repoName);
 
-//		System.out.println(repoInfo.getDescription());
+//		GitHubApiClient gitHubApiClient = new GitHubApiClient(user, token);
+//		GetRepoInfoResponse repoInfo = gitHubApiClient.getRepoInfo("CSC109", "GitHubApiClient");
+		System.out.println(repoInfo.getDescription());
+
 
 
 	}
