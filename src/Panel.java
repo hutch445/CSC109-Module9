@@ -8,8 +8,8 @@ import javax.swing.JPanel;
 public class Panel extends JPanel {
 
 	// Make this your token, delete before pushing this to GitHub
-	private final String personalToken = "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";
-	private final String myGitHubUsername = "KyleChutjian";
+	private final String personalToken = "";
+	private final String myGitHubUsername = "";
 	private final String repoOwner = "hutch445";
 	private final String repoName = "CSC109-Module9";
 
