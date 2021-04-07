@@ -4,16 +4,32 @@ public class Main extends JFrame {
     public static void main(String[] args) {
         new Main("Integrated GitHub GUI");
     }
-    
-    public Main(String title) {
 
+    private MainPanel mainPanel;
+
+    public Main(String title) {
         super(title);
         this.setSize(500, 500);
         this.setDefaultCloseOperation(javax.swing.JFrame.EXIT_ON_CLOSE);
-        this.add(new MainPanel(this));
+        mainPanel = new MainPanel(this);
+        this.add(mainPanel);
         
         this.setVisible(true);
       }
 
-   
+
+    public void switchPanel(int i) {
+        switch(i) {
+            case 1:
+                removeAll();
+                this.remove(mainPanel);
+//                this.add(new CreateRepoPanel(this));
+                this.revalidate();
+                this.repaint();
+                revalidate();
+                repaint();
+                System.out.println("End");
+
+        }
+    }
 }

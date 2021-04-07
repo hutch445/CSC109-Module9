@@ -6,15 +6,24 @@ public class MainPanel extends JPanel {
 
     public MainPanel(Main main) {
         this.main = main;
-        JLabel label = new JLabel("Testing");
-        JButton btn = new JButton("Create Repository");
-        btn.addActionListener(x -> {
-            System.out.println("Button clicked");
-        });
+        this.add(new OptionsPanel(this));
 
 
-        this.add(label);
-        this.add(btn);
+
     }
 
+    public void switchPanel(int i) {
+        switch(i) {
+            case 1:
+                removeAll();
+                this.removeAll();
+                this.add(new CreateRepoPanel(this));
+                this.revalidate();
+                this.repaint();
+                revalidate();
+                repaint();
+                System.out.println("End");
+
+        }
+    }
 }
