@@ -10,12 +10,12 @@ import github.tools.responseObjects.ListReposResponse;
 import javax.swing.*;
 import java.awt.*;
 
-public class Panel extends JPanel {
+public class CreateRepoPanel extends JPanel {
 
 	// Make this your token, delete before pushing this to GitHub
 	private Main main;
 
-	public Panel(Main main) {
+	public CreateRepoPanel(Main main) {
 		super(new GridLayout(10,2));
 		super.setSize(500,500);
 		this.main = main;
