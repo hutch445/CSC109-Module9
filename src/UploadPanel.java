@@ -10,11 +10,11 @@ import github.tools.responseObjects.ListReposResponse;
 import javax.swing.*;
 import java.awt.*;
 
-public class uploadPanel extends JPanel {
+public class UploadPanel extends JPanel {
 	
-	private Main main;
+	private MainPanel main;
 	
-	public uploadPanel(Main main) {
+	public UploadPanel(MainPanel main) {
 		super(new GridLayout(10,3));
 		super.setSize(500,500);
 		this.main = main;
@@ -57,7 +57,6 @@ public class uploadPanel extends JPanel {
 		// Creating button and adding anonymous class
 		JButton button = new JButton("Create Repository");
 		button.addActionListener(btn -> {
-			System.out.println("Button was clicked");
 			final String myGitHubUsername = usernameText.getText();
 			final String myGitHubToken = tokenText.getText();
 			final String myRepoName = repoNameText.getText();

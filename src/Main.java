@@ -13,23 +13,6 @@ public class Main extends JFrame {
         this.setDefaultCloseOperation(javax.swing.JFrame.EXIT_ON_CLOSE);
         mainPanel = new MainPanel(this);
         this.add(mainPanel);
-        
         this.setVisible(true);
       }
-
-
-    public void switchPanel(int i) {
-        switch(i) {
-            case 1:
-                removeAll();
-                this.remove(mainPanel);
-//                this.add(new CreateRepoPanel(this));
-                this.revalidate();
-                this.repaint();
-                revalidate();
-                repaint();
-                System.out.println("End");
-
-        }
-    }
 }

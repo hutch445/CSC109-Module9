@@ -19,7 +19,6 @@ public class CreateRepoPanel extends JPanel {
 		super(new GridLayout(10,2));
 		super.setSize(500,500);
 		this.main = main;
-		System.out.print("CreateRepoPanel Initialization");
 
 		// Creating Rows
 		JPanel row1 = new JPanel();
@@ -51,7 +50,6 @@ public class CreateRepoPanel extends JPanel {
 		// Creating button and adding anonymous class
 		JButton button = new JButton("Create Repository");
 		button.addActionListener(btn -> {
-			System.out.println("Button was clicked");
 			final String myGitHubUsername = usernameText.getText();
 			final String myGitHubToken = tokenText.getText();
 			final String myRepoName = repoNameText.getText();

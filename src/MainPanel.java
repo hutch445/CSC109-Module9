@@ -8,22 +8,21 @@ public class MainPanel extends JPanel {
         this.main = main;
         this.add(new OptionsPanel(this));
 
-
-
     }
-
     public void switchPanel(int i) {
         switch(i) {
             case 1:
-                removeAll();
                 this.removeAll();
                 this.add(new CreateRepoPanel(this));
                 this.revalidate();
                 this.repaint();
-                revalidate();
-                repaint();
-                System.out.println("End");
-
+                break;
+            case 2:
+                this.removeAll();
+                this.add(new UploadPanel(this));
+                this.revalidate();
+                this.repaint();
+                break;
         }
     }
 }
