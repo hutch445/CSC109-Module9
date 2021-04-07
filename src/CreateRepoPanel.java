@@ -13,12 +13,13 @@ import java.awt.*;
 public class CreateRepoPanel extends JPanel {
 
 	// Make this your token, delete before pushing this to GitHub
-	private Main main;
+	private MainPanel main;
 
-	public CreateRepoPanel(Main main) {
+	public CreateRepoPanel(MainPanel main) {
 		super(new GridLayout(10,2));
 		super.setSize(500,500);
 		this.main = main;
+		System.out.print("CreateRepoPanel Initialization");
 
 		// Creating Rows
 		JPanel row1 = new JPanel();
