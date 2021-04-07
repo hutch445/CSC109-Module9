@@ -1,12 +1,4 @@
-import github.tools.client.GitHubApiClient;
-import github.tools.responseObjects.*;
-
-
-
 import javax.swing.JFrame;
-import javax.swing.JPanel;
-
-import git.tools.client.GitSubprocessClient;
 
 public class Main extends JFrame {
     public static void main(String[] args) {
