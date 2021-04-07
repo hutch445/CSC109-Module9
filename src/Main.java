@@ -10,7 +10,7 @@ public class Main extends JFrame {
         super(title);
         this.setSize(500, 500);
         this.setDefaultCloseOperation(javax.swing.JFrame.EXIT_ON_CLOSE);
-        this.add(new Panel());
+        this.add(new Panel(this));
         
         this.setVisible(true);
       }
