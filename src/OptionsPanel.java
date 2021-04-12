@@ -15,10 +15,12 @@ public class OptionsPanel extends JPanel {
         editRepo.addActionListener(x -> {
             mainPanel.switchPanel(2);
         });
+
         this.add(new JLabel());
         this.add(createRepo);
         this.add(new JLabel());
         this.add(editRepo);
+
 
     }
 }

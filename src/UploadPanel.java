@@ -13,6 +13,7 @@ import java.awt.*;
 public class UploadPanel extends JPanel {
 	
 	private MainPanel main;
+	GitSubprocessClient gitSubprocessClient = new GitSubprocessClient(null);
 	
 	public UploadPanel(MainPanel main) {
 		super(new GridLayout(10,3));
@@ -26,6 +27,7 @@ public class UploadPanel extends JPanel {
 		JPanel row4 = new JPanel();
 		JPanel row5 = new JPanel();
 		JPanel row6 = new JPanel();
+		JPanel row7 = new JPanel();
 		JPanel lastRow = new JPanel();
 		JPanel errorRow = new JPanel();
 		JLabel errorLabel = new JLabel("");
@@ -52,7 +54,22 @@ public class UploadPanel extends JPanel {
 		row6.add(filePath);
 		row6.add(filePathText);
 		
-		
+		// Creating Add Button
+        JButton addRepo = new JButton("Add to Repository");
+        addRepo.addActionListener(x -> {
+        	
+        	gitSubprocessClient.setRepoPath(filePathText.getText());
+        	if (gitSubprocessClient.getRepoPath().equals(""))
+        	{
+        		System.out.println("Please enter a valid repo path.");
+        	}
+        	else
+        	{
+        		gitSubprocessClient.gitAddAll();
+        	}
+        	
+        });
+        row7.add(addRepo);
 
 		// Creating button and adding anonymous class
 		JButton button = new JButton("Create Repository");
@@ -76,14 +93,6 @@ public class UploadPanel extends JPanel {
 				errorLabel.setForeground(Color.RED);
 				main.repaint();
 			}
-			
-		//	 Creating button and adding anonymous class
-//		JButton addbutton = new JButton("Add all");
-//			button.addActionListener(btn2 -> {
-	//			GitSubprocessClient gitSubprocessClient = new GitSubprocessClient(filePathText);
-	//			String gitAddAll = gitSubprocessClient.gitAddAll();
-//		});
-		
 
 		boolean doesExist = false;
 		if (repos != null) {
@@ -108,6 +117,8 @@ public class UploadPanel extends JPanel {
 	this.add(row1);
 	this.add(row2);
 	this.add(row5);
+	this.add(row6);
+	this.add(row7);
 	this.add(lastRow);
 	this.add(errorRow);
 

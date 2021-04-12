@@ -23,6 +23,8 @@ public class MainPanel extends JPanel {
                 this.revalidate();
                 this.repaint();
                 break;
+            case 3:
+
         }
     }
 }
