@@ -15,10 +15,12 @@ public class UploadPanel extends JPanel {
 	private MainPanel main;
 	GitSubprocessClient gitSubprocessClient = new GitSubprocessClient(null);
 	
-	public UploadPanel(MainPanel main) {
+	public UploadPanel(MainPanel main, boolean isDark) {
 		super(new GridLayout(10,3));
 		super.setSize(500,500);
 		this.main = main;
+
+
 
 		// Creating Rows
 		JPanel row1 = new JPanel();
@@ -121,6 +123,21 @@ public class UploadPanel extends JPanel {
 	this.add(row7);
 	this.add(lastRow);
 	this.add(errorRow);
+
+		if (isDark) {
+			this.setBackground(Color.DARK_GRAY);
+			main.setBackground(Color.DARK_GRAY);
+			row7.setBackground(Color.DARK_GRAY);
+			lastRow.setBackground(Color.DARK_GRAY);
+			errorRow.setBackground(Color.DARK_GRAY);
+
+		} else {
+			this.setBackground(Color.LIGHT_GRAY);
+			main.setBackground(Color.LIGHT_GRAY);
+			row7.setBackground(Color.LIGHT_GRAY);
+			lastRow.setBackground(Color.LIGHT_GRAY);
+			errorRow.setBackground(Color.LIGHT_GRAY);
+		}
 
 }
 }

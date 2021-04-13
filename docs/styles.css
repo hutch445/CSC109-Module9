@@ -1,0 +1,61 @@
+body {
+    margin: 0px;
+    font-family: 'Quicksand', sans-serif;
+    text-align: center;
+}
+
+.title {
+    height: 35px;
+    padding: 30px;
+    font-size: 40px;
+    background-color: gray;
+}
+
+.title a {
+    text-decoration: none;
+    color: black;
+}
+
+.header {
+    font-size: 25px;
+    margin-top: 50px;
+}
+
+.aboutDescription {
+    margin-top: 10px;
+    margin-bottom:50px;
+    font-size: 17px;
+}
+
+.image-headers {
+    margin-right: 20px;
+}
+
+.aboutHeader {
+    margin-top:20px;
+}
+
+.listWrapper {
+    list-style-position: inside;
+}
+
+.listItem {
+    font-size: 17px;
+    margin-top: 10px;
+    margin-right: 20px;
+}
+
+.image-table {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top:20px;
+}
+
+.image-table img {
+    width:500px;
+    height:200px;
+}
+
+.requirements {
+    margin-bottom: 100px;
+}

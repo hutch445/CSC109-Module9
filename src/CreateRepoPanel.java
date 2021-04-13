@@ -15,10 +15,12 @@ public class CreateRepoPanel extends JPanel {
 	// Make this your token, delete before pushing this to GitHub
 	private MainPanel main;
 
-	public CreateRepoPanel(MainPanel main) {
+	public CreateRepoPanel(MainPanel main, boolean isDark) {
 		super(new GridLayout(10,2));
 		super.setSize(500,500);
 		this.main = main;
+
+
 
 		// Creating Rows
 		JPanel row1 = new JPanel();
@@ -95,6 +97,18 @@ public class CreateRepoPanel extends JPanel {
 		this.add(row5);
 		this.add(lastRow);
 		this.add(errorRow);
+		if (isDark) {
+			this.setBackground(Color.DARK_GRAY);
+			main.setBackground(Color.DARK_GRAY);
+			lastRow.setBackground(Color.DARK_GRAY);
+			errorRow.setBackground(Color.DARK_GRAY);
+
+		} else {
+			this.setBackground(Color.LIGHT_GRAY);
+			main.setBackground(Color.LIGHT_GRAY);
+			lastRow.setBackground(Color.LIGHT_GRAY);
+			errorRow.setBackground(Color.LIGHT_GRAY);
+		}
 
 	}
 }

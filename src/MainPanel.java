@@ -1,4 +1,5 @@
 import javax.swing.*;
+import java.awt.*;
 
 public class MainPanel extends JPanel {
 
@@ -7,19 +8,20 @@ public class MainPanel extends JPanel {
     public MainPanel(Main main) {
         this.main = main;
         this.add(new OptionsPanel(this));
+        this.setBackground(Color.lightGray);
 
     }
-    public void switchPanel(int i) {
+    public void switchPanel(int i, boolean isDark) {
         switch(i) {
             case 1:
                 this.removeAll();
-                this.add(new CreateRepoPanel(this));
+                this.add(new CreateRepoPanel(this,isDark));
                 this.revalidate();
                 this.repaint();
                 break;
             case 2:
                 this.removeAll();
-                this.add(new UploadPanel(this));
+                this.add(new UploadPanel(this,isDark));
                 this.revalidate();
                 this.repaint();
                 break;
